@@ -55,6 +55,44 @@ internal class PiFormulaVariable <: FormulaVariable {
 
 }
 
+internal class GreekLowercasePiFormulaVariable <: FormulaVariable {
+
+    public static let INSTANCE: GreekLowercasePiFormulaVariable = GreekLowercasePiFormulaVariable()
+
+    public override prop keyword: String {
+        get() {
+            return "π"
+        }
+    }
+
+    private GreekLowercasePiFormulaVariable() {
+    }
+
+    public override func get(_: Array<String>): Float64 {
+        return Float64.getPI()
+    }
+
+}
+
+internal class GreekUppercasePiFormulaVariable <: FormulaVariable {
+
+    public static let INSTANCE: GreekUppercasePiFormulaVariable = GreekUppercasePiFormulaVariable()
+
+    public override prop keyword: String {
+        get() {
+            return "∏"
+        }
+    }
+
+    private GreekUppercasePiFormulaVariable() {
+    }
+
+    public override func get(_: Array<String>): Float64 {
+        return Float64.getPI()
+    }
+
+}
+
 internal class EFormulaVariable <: FormulaVariable {
 
     public static let INSTANCE: EFormulaVariable = EFormulaVariable()

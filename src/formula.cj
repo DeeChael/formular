@@ -36,6 +36,8 @@ class Formula <: Equatable<Formula> {
     public func calculate(): Float64 {
         if (this.internalVariables) {
             this.variables.add(PiFormulaVariable.INSTANCE)
+            this.variables.add(GreekLowercasePiFormulaVariable.INSTANCE)
+            this.variables.add(GreekUppercasePiFormulaVariable.INSTANCE)
             this.variables.add(EFormulaVariable.INSTANCE)
         }
         let copiedTokens = this.tokens.clone()
