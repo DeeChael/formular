@@ -1,7 +1,7 @@
 [package]
   cjc-version = "1.0.0"
   name = "formular"
-  description = "A formular parsing library made by DeeChael"
+  description = "A formula parser written in Cangjie."
   version = "1.0.0"
   target-dir = ""
   src-dir = ""
